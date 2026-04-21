@@ -1,9 +1,9 @@
 <?php
 $site = [
     "title" => "Mico",
-    "phone" => "+01 123455678990",
-    "email" => "demo@gmail.com",
-    "location" => "Location",
+    "phone" => "+33 555 555 555",
+    "email" => "bakuri@gmail.com",
+    "location" => "Kutaisi, Strasbourg ",
     "logo" => "images/logo.png"
 ];
 
