@@ -1131,3 +1131,22 @@ a:focus {
 }
 /*# sourceMappingURL=style.css.map */
 
+
+/* Doctor photos - same size everywhere */
+/* Doctor cards same height */
+.team_section .box {
+  height: 100%;
+}
+
+.team_section .img-box {
+  height: 320px;
+  overflow: hidden;
+}
+
+.team_section .img-box img {
+  width: 100% !important;
+  height: 320px !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}

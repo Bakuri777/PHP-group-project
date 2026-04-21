@@ -16,7 +16,7 @@ include 'components/header.php';
           <div class="item">
             <div class="box">
               <div class="img-box">
-                <img src="<?= e($doctor['image']) ?>" alt="<?= e($doctor['name']) ?>" style="width: 100%; height: 300px; object-fit: cover; object-position: center; display: block;">
+                <img src="<?= e($doctor['image']) ?>" alt="<?= e($doctor['name']) ?>" >
               </div>
               <div class="detail-box">
                 <h5><?= e($doctor['name']) ?></h5>
