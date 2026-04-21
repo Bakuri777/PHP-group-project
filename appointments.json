@@ -1,0 +1,47 @@
+[
+    {
+        "patient_name": "ვლადიმერ",
+        "doctor_name": "Normal distribution",
+        "department_name": "Normal distribution",
+        "phone": "555337127",
+        "symptoms": "ტეხიარობა მააქვს",
+        "appointment_date": "04-18-2026",
+        "created_at": "2026-04-18 19:24:08"
+    },
+    {
+        "patient_name": "ვლადიმერ",
+        "doctor_name": "Normal distribution",
+        "department_name": "Normal distribution",
+        "phone": "555337127",
+        "symptoms": "ტეხიარობა მააქვს",
+        "appointment_date": "04-18-2026",
+        "created_at": "2026-04-18 19:25:06"
+    },
+    {
+        "patient_name": "ლადო",
+        "doctor_name": "Normal distribution",
+        "department_name": "Normal distribution",
+        "phone": "555337127",
+        "symptoms": "ტეხიარობა მაქვს",
+        "appointment_date": "04-18-2026",
+        "created_at": "2026-04-18 19:28:06"
+    },
+    {
+        "patient_name": "vladimer",
+        "doctor_name": "Vladimer Natsvlishvili",
+        "department_name": "Brain Surgery",
+        "phone": "555337127",
+        "symptoms": "შფოთვა მაქვს კოშმარები მესზიმრება",
+        "appointment_date": "04-18-2026",
+        "created_at": "2026-04-18 20:43:54"
+    },
+    {
+        "patient_name": "bakuri",
+        "doctor_name": "Vladimer Natsvlishvili",
+        "department_name": "Brain Surgery",
+        "phone": "5555555555",
+        "symptoms": "ragaca vera var",
+        "appointment_date": "04-18-2026",
+        "created_at": "2026-04-18 21:24:48"
+    }
+]
