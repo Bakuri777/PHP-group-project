@@ -198,19 +198,19 @@ $doctors = [
 
 $testimonials = [
     [
-        "name" => "Morijorch",
-        "subtitle" => "Default model text",
-        "text" => "editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various"
+        "name" => "Emily Carter",
+        "subtitle" => "Satisfied Patient",
+        "text" => "The doctors were professional, caring, and attentive from start to finish. I felt comfortable throughout the entire process and received excellent treatment."
     ],
     [
-        "name" => "Rochak",
-        "subtitle" => "Default model text",
-        "text" => "Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+        "name" => "Michael Brown",
+        "subtitle" => "Happy Client",
+        "text" => "Outstanding service and a friendly medical team. Booking an appointment was simple, and the care I received exceeded my expectations."
     ],
     [
-        "name" => "Brad Johns",
-        "subtitle" => "Default model text",
-        "text" => "Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various"
+        "name" => "Sophia Wilson",
+        "subtitle" => "Regular Visitor",
+        "text" => "Clean facilities, modern equipment, and highly skilled specialists. I always trust this clinic for quality healthcare and fast support."
     ]
 ];
 
