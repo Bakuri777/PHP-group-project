@@ -1,9 +1,10 @@
 <?php
+
 $site = [
     "title" => "Mico",
     "phone" => "+33 555 555 555",
-    "email" => "bakuri@gmail.com",
-    "location" => "Kutaisi, Strasbourg ",
+    "email" => "bakuri@gmail.com vladimer@gmail.com",
+    "location" => "Tbilisi, Strasbourg",
     "logo" => "images/logo.png"
 ];
 
@@ -20,7 +21,7 @@ $sliderItems = [
     [
         "title_top" => "Mico",
         "title_bottom" => "Hospital",
-        "text" => "when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to",
+        "text" => "Clean, modern clinic with professional staff.",
         "button_text" => "Contact Us",
         "button_link" => "contact.php",
         "image" => "images/slider-img.jpg"
@@ -28,7 +29,7 @@ $sliderItems = [
     [
         "title_top" => "Mico",
         "title_bottom" => "Hospital",
-        "text" => "when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to",
+        "text" => "We provide high quality medical services.",
         "button_text" => "Contact Us",
         "button_link" => "contact.php",
         "image" => "images/slider-img.jpg"
@@ -36,12 +37,13 @@ $sliderItems = [
     [
         "title_top" => "Mico",
         "title_bottom" => "Hospital",
-        "text" => "when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to",
+        "text" => "Your health is our priority.",
         "button_text" => "Contact Us",
         "button_link" => "contact.php",
         "image" => "images/slider-img.jpg"
     ]
 ];
+
 $appointmentDepartments = [
     "Nephrologist Care",
     "Eye Care",
@@ -56,71 +58,41 @@ $doctors = [
         "name" => "Hennry",
         "degree" => "MBBS",
         "image" => "images/team1.jpg",
-        "social" => [
-            "facebook" => "#",
-            "twitter" => "#",
-            "linkedin" => "#",
-            "instagram" => "#"
-        ]
+        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
     ],
     [
         "name" => "Jenni",
         "degree" => "MBBS",
         "image" => "images/team2.jpg",
-        "social" => [
-            "facebook" => "#",
-            "twitter" => "#",
-            "linkedin" => "#",
-            "instagram" => "#"
-        ]
+        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
     ],
     [
         "name" => "Morco",
         "degree" => "MBBS",
         "image" => "images/team3.jpg",
-        "social" => [
-            "facebook" => "#",
-            "twitter" => "#",
-            "linkedin" => "#",
-            "instagram" => "#"
-        ]
+        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
     ],
     [
         "name" => "Vladimer Natsvlishvili",
         "degree" => "Brain Surgeon",
         "image" => "images/me.jpg",
-        "social" => [
-            "facebook" => "#",
-            "twitter" => "#",
-            "linkedin" => "#",
-            "instagram" => "#"
-        ]
+        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
     ],
     [
-        "name" => "Bakuri Dzaganidze",
-        "degree" => "AI Cardiologist",
+        "name" => "Bakuri Dzaganidze 🤖",
+        "degree" => "AI Cardiologist ❤️",
         "image" => "images/bakuri.jpg",
-        "social" => [
-            "facebook" => "#",
-            "twitter" => "#",
-            "linkedin" => "#",
-            "instagram" => "#"
-        ]
+        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
     ]
 ];
 
-$appointmentDoctors = [
-    "Hennry",
-    "Jenni",
-    "Morco",
-    "Vladimer Natsvlishvili",
-    "Bakuri Dzaganidze"
-];
+#  დინამიური ექიმების სია 
+$appointmentDoctors = array_column($doctors, 'name');
 
 $about = [
     "title" => "About",
     "highlight" => "Hospital",
-    "text" => "has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors",
+    "text" => "Modern clinic with professional doctors and high-quality service.",
     "image" => "images/about-img.jpg",
     "button_text" => "Read More",
     "button_link" => "about.php"
@@ -129,97 +101,54 @@ $about = [
 $treatments = [
     [
         "title" => "Nephrologist Care",
-        "text" => "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        "text" => "Professional kidney treatment.",
         "image" => "images/t1.png",
         "link" => "treatment.php"
     ],
     [
         "title" => "Eye Care",
-        "text" => "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        "text" => "Advanced eye diagnostics and surgery.",
         "image" => "images/t2.png",
         "link" => "treatment.php"
     ],
     [
         "title" => "Pediatrician Clinic",
-        "text" => "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        "text" => "Best care for children.",
         "image" => "images/t3.png",
         "link" => "treatment.php"
     ],
     [
         "title" => "Parental Care",
-        "text" => "alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything",
+        "text" => "Support for families and parents.",
         "image" => "images/t4.png",
         "link" => "treatment.php"
     ]
-];
-
-$doctors = [
-    [
-        "name" => "Hennry",
-        "degree" => "MBBS",
-        "image" => "images/team1.jpg",
-        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
-    ],
-    [
-        "name" => "Jenni",
-        "degree" => "MBBS",
-        "image" => "images/team2.jpg",
-        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
-    ],
-    [
-        "name" => "Morco",
-        "degree" => "MBBS",
-        "image" => "images/team3.jpg",
-        "social" => ["facebook" => "#", "twitter" => "#", "linkedin" => "#", "instagram" => "#"]
-    ],
-    [
-        "name" => "Vladimer Natsvlishvili",
-        "degree" => "Brain Surgeon",
-        "image" => "images/me.jpg",
-        "social" => [
-            "facebook" => "#",
-            "twitter" => "#",
-            "linkedin" => "#",
-            "instagram" => "#"
-        ]
-    ],
-    [
-    "name" => "Bakuri Dzaganidze 🤖",
-    "degree" => "AI Cardiologist ❤️",
-    "image" => "images/bakuri.jpg",
-    "social" => [
-        "facebook" => "#",
-        "twitter" => "#",
-        "linkedin" => "#",
-        "instagram" => "#"
-    ]
-   ]
 ];
 
 $testimonials = [
     [
         "name" => "Emily Carter",
         "subtitle" => "Satisfied Patient",
-        "text" => "The doctors were professional, caring, and attentive from start to finish. I felt comfortable throughout the entire process and received excellent treatment."
+        "text" => "Professional doctors and great service."
     ],
     [
         "name" => "Michael Brown",
         "subtitle" => "Happy Client",
-        "text" => "Outstanding service and a friendly medical team. Booking an appointment was simple, and the care I received exceeded my expectations."
+        "text" => "Easy appointment booking and friendly staff."
     ],
     [
         "name" => "Sophia Wilson",
         "subtitle" => "Regular Visitor",
-        "text" => "Clean facilities, modern equipment, and highly skilled specialists. I always trust this clinic for quality healthcare and fast support."
+        "text" => "Always reliable and clean clinic."
     ]
 ];
 
 $latestPosts = [
-    ["image" => "images/post1.jpg", "text" => "Normal distribution"],
-    ["image" => "images/post2.jpg", "text" => "Normal distribution"]
+    ["image" => "images/post1.jpg", "text" => "Health tips"],
+    ["image" => "images/post2.jpg", "text" => "Clinic news"]
 ];
 
 $newsPosts = [
-    ["image" => "images/post3.jpg", "text" => "Normal distribution"],
-    ["image" => "images/post4.png", "text" => "Normal distribution"]
+    ["image" => "images/post3.jpg", "text" => "Medical updates"],
+    ["image" => "images/post4.png", "text" => "Technology in healthcare"]
 ];
