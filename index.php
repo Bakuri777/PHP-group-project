@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include 'data.php';
-include 'functions.php';
+include __DIR__ . '/data.php';
+include __DIR__ . '/functions.php';
 
 $pageTitle = 'Mico';
 $activePage = 'index';
@@ -11,16 +11,16 @@ $activePage = 'index';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['appointment_submit'])) {
 
     $appointmentData = [
-        'patient_name'     => $_POST['patient_name'] ?? '',
-        'doctor_name'      => $_POST['doctor_name'] ?? '',
-        'department_name'  => $_POST['department_name'] ?? '',
-        'phone'            => $_POST['phone'] ?? '',
-        'symptoms'         => $_POST['symptoms'] ?? '',
-        'appointment_date' => $_POST['appointment_date'] ?? '',
+        'patient_name'     => trim($_POST['patient_name'] ?? ''),
+        'doctor_name'      => trim($_POST['doctor_name'] ?? ''),
+        'department_name'  => trim($_POST['department_name'] ?? ''),
+        'phone'            => trim($_POST['phone'] ?? ''),
+        'symptoms'         => trim($_POST['symptoms'] ?? ''),
+        'appointment_date' => trim($_POST['appointment_date'] ?? ''),
         'created_at'       => date('Y-m-d H:i:s')
     ];
 
-    $appointmentsFile = 'appointments.json';
+    $appointmentsFile = __DIR__ . '/appointments.json';
 
     $appointments = file_exists($appointmentsFile)
         ? json_decode(file_get_contents($appointmentsFile), true)
@@ -47,14 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['appointment_submit'])
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
 
     $contactData = [
-        'full_name'    => $_POST['full_name'] ?? '',
-        'email'        => $_POST['email'] ?? '',
-        'phone_number' => $_POST['phone_number'] ?? '',
-        'message'      => $_POST['message'] ?? '',
+        'full_name'    => trim($_POST['full_name'] ?? ''),
+        'email'        => trim($_POST['email'] ?? ''),
+        'phone_number' => trim($_POST['phone_number'] ?? ''),
+        'message'      => trim($_POST['message'] ?? ''),
         'created_at'   => date('Y-m-d H:i:s')
     ];
 
-    $contactFile = 'contact.json';
+    $contactFile = __DIR__ . '/contact.json';
 
     $contacts = file_exists($contactFile)
         ? json_decode(file_get_contents($contactFile), true)
@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['contact_submit'])) {
     exit;
 }
 
-include 'components/header.php';
+include __DIR__ . '/components/header.php';
 ?>
 
 <section class="slider_section ">
@@ -96,7 +96,7 @@ include 'components/header.php';
               <div class="col-md-6">
                 <div class="detail-box">
                   <div class="play_btn">
-                    <button>
+                    <button type="button">
                       <i class="fa fa-play" aria-hidden="true"></i>
                     </button>
                   </div>
@@ -143,7 +143,7 @@ include 'components/header.php';
     <div class="row">
       <div class="col">
 
-        <form method="post">
+        <form method="post" action="">
 
           <h4>BOOK <span>APPOINTMENT</span></h4>
 
@@ -151,12 +151,12 @@ include 'components/header.php';
 
             <div class="form-group col-lg-4">
               <label>Patient Name</label>
-              <input type="text" class="form-control" name="patient_name">
+              <input type="text" class="form-control" name="patient_name" required>
             </div>
 
             <div class="form-group col-lg-4">
               <label>Doctor's Name</label>
-              <select name="doctor_name" class="form-control wide">
+              <select name="doctor_name" class="form-control wide" required>
                 <?php foreach ($appointmentDoctors as $doctor): ?>
                   <option value="<?= e($doctor) ?>"><?= e($doctor) ?></option>
                 <?php endforeach; ?>
@@ -165,7 +165,7 @@ include 'components/header.php';
 
             <div class="form-group col-lg-4">
               <label>Department's Name</label>
-              <select name="department_name" class="form-control wide">
+              <select name="department_name" class="form-control wide" required>
                 <?php foreach ($appointmentDepartments as $department): ?>
                   <option value="<?= e($department) ?>"><?= e($department) ?></option>
                 <?php endforeach; ?>
@@ -178,17 +178,24 @@ include 'components/header.php';
 
             <div class="form-group col-lg-4">
               <label>Phone Number</label>
-              <input type="text" class="form-control" name="phone">
+              <input type="text" class="form-control" name="phone" required>
             </div>
 
             <div class="form-group col-lg-4">
               <label>Symptoms</label>
-              <input type="text" class="form-control" name="symptoms">
+              <input type="text" class="form-control" name="symptoms" required>
             </div>
 
             <div class="form-group col-lg-4">
-              <label>Choose Date</label>
-              <input type="text" class="form-control" name="appointment_date">
+                <label>Choose Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name="appointment_date"
+                  value="<?= date('Y-m-d') ?>"
+                  min="<?= date('Y-m-d') ?>"
+                  required
+                >
             </div>
 
           </div>
@@ -339,22 +346,22 @@ include 'components/header.php';
       <div class="col-md-7">
         <div class="form_container">
 
-          <form method="post">
+          <form method="post" action="">
 
             <div>
-              <input type="text" name="full_name" placeholder="Full Name">
+              <input type="text" name="full_name" placeholder="Full Name" required>
             </div>
 
             <div>
-              <input type="email" name="email" placeholder="Email">
+              <input type="email" name="email" placeholder="Email" required>
             </div>
 
             <div>
-              <input type="text" name="phone_number" placeholder="Phone Number">
+              <input type="text" name="phone_number" placeholder="Phone Number" required>
             </div>
 
             <div>
-              <input type="text" class="message-box" name="message" placeholder="Message">
+              <input type="text" class="message-box" name="message" placeholder="Message" required>
             </div>
 
             <div class="btn_box">
@@ -376,4 +383,4 @@ include 'components/header.php';
   </div>
 </section>
 
-<?php include 'components/footer.php'; ?>
+<?php include __DIR__ . '/components/footer.php'; ?>

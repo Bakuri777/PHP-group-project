@@ -8,4 +8,3 @@ function isActivePage($pageKey, $activePage)
 {
     return $pageKey === $activePage ? 'active' : '';
 }
-

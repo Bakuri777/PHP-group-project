@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include 'data.php';
-include 'functions.php';
+include __DIR__ . '/data.php';
+include __DIR__ . '/functions.php';
 
 $pageTitle = 'Appointment Success';
 $activePage = '';
@@ -14,7 +14,7 @@ if (!isset($_SESSION['appointment'])) {
 
 $data = $_SESSION['appointment'];
 
-include 'components/header.php';
+include __DIR__ . '/components/header.php';
 ?>
 
 <section class="about_section layout_padding">
@@ -37,4 +37,4 @@ include 'components/header.php';
   </div>
 </section>
 
-<?php include 'components/footer.php'; ?>
+<?php include __DIR__ . '/components/footer.php'; ?>
