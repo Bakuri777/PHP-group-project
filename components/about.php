@@ -1,14 +1,4 @@
-<?php
-include __DIR__ . '/data.php';
-include __DIR__ . '/functions.php';
-
-$pageTitle = 'About - Mico';
-$activePage = 'about';
-
-include __DIR__ . '/components/header.php';
-?>
-
-<section class="about_section layout_padding">
+<section class="about_section layout_padding" id="about">
   <div class="container">
     <div class="row">
 
@@ -38,5 +28,3 @@ include __DIR__ . '/components/header.php';
     </div>
   </div>
 </section>
-
-<?php include __DIR__ . '/components/footer.php'; ?>

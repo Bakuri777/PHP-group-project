@@ -1,14 +1,4 @@
-<?php
-include __DIR__ . '/data.php';
-include __DIR__ . '/functions.php';
-
-$pageTitle = 'Treatment - Mico';
-$activePage = 'treatment';
-
-include __DIR__ . '/components/header.php';
-?>
-
-<section class="treatment_section layout_padding">
+<section class="treatment_section layout_padding" id="treatment">
   <div class="side_img">
     <img src="images/treatment-side-img.jpg" alt="treatment side image">
   </div>
@@ -39,5 +29,3 @@ include __DIR__ . '/components/header.php';
     </div>
   </div>
 </section>
-
-<?php include __DIR__ . '/components/footer.php'; ?>

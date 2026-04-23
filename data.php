@@ -3,18 +3,18 @@
 $site = [
     "title" => "Mico",
     "phone" => "+33 555 555 555",
-    "email" => "bakuri@gmail.com vladimer@gmail.com",
+    "email" => "bakuri@gmail.com",
     "location" => "Tbilisi, Strasbourg",
     "logo" => "images/logo.png"
 ];
 
 $navLinks = [
     "index" => ["label" => "Home", "url" => "index.php"],
-    "about" => ["label" => "About", "url" => "about.php"],
-    "treatment" => ["label" => "Treatment", "url" => "treatment.php"],
-    "doctor" => ["label" => "Doctors", "url" => "doctor.php"],
-    "testimonial" => ["label" => "Testimonial", "url" => "testimonial.php"],
-    "contact" => ["label" => "Contact Us", "url" => "contact.php"]
+    "about" => ["label" => "About", "url" => "index.php#about"],
+    "treatment" => ["label" => "Treatment", "url" => "index.php#treatment"],
+    "doctor" => ["label" => "Doctors", "url" => "index.php#doctor"],
+    "testimonial" => ["label" => "Testimonial", "url" => "index.php#testimonial"],
+    "contact" => ["label" => "Contact Us", "url" => "index.php#contact"]
 ];
 
 $sliderItems = [
@@ -23,7 +23,7 @@ $sliderItems = [
         "title_bottom" => "Hospital",
         "text" => "Clean, modern clinic with professional staff.",
         "button_text" => "Contact Us",
-        "button_link" => "contact.php",
+        "button_link" => "index.php#contact",
         "image" => "images/slider-img.jpg"
     ],
     [
@@ -31,7 +31,7 @@ $sliderItems = [
         "title_bottom" => "Hospital",
         "text" => "We provide high quality medical services.",
         "button_text" => "Contact Us",
-        "button_link" => "contact.php",
+        "button_link" => "index.php#contact",
         "image" => "images/slider-img.jpg"
     ],
     [
@@ -39,7 +39,7 @@ $sliderItems = [
         "title_bottom" => "Hospital",
         "text" => "Your health is our priority.",
         "button_text" => "Contact Us",
-        "button_link" => "contact.php",
+        "button_link" => "index.php#contact",
         "image" => "images/slider-img.jpg"
     ]
 ];
@@ -86,7 +86,6 @@ $doctors = [
     ]
 ];
 
-#  დინამიური ექიმების სია 
 $appointmentDoctors = array_column($doctors, 'name');
 
 $about = [
@@ -95,7 +94,7 @@ $about = [
     "text" => "Modern clinic with professional doctors and high-quality service.",
     "image" => "images/about-img.jpg",
     "button_text" => "Read More",
-    "button_link" => "about.php"
+    "button_link" => "index.php#about"
 ];
 
 $treatments = [
@@ -103,25 +102,25 @@ $treatments = [
         "title" => "Nephrologist Care",
         "text" => "Professional kidney treatment.",
         "image" => "images/t1.png",
-        "link" => "treatment.php"
+        "link" => "index.php#treatment"
     ],
     [
         "title" => "Eye Care",
         "text" => "Advanced eye diagnostics and surgery.",
         "image" => "images/t2.png",
-        "link" => "treatment.php"
+        "link" => "index.php#treatment"
     ],
     [
         "title" => "Pediatrician Clinic",
         "text" => "Best care for children.",
         "image" => "images/t3.png",
-        "link" => "treatment.php"
+        "link" => "index.php#treatment"
     ],
     [
         "title" => "Parental Care",
         "text" => "Support for families and parents.",
         "image" => "images/t4.png",
-        "link" => "treatment.php"
+        "link" => "index.php#treatment"
     ]
 ];
 
