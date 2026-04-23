@@ -1,14 +1,4 @@
-<?php
-include __DIR__ . '/data.php';
-include __DIR__ . '/functions.php';
-
-$pageTitle = 'Doctors - Mico';
-$activePage = 'doctor';
-
-include __DIR__ . '/components/header.php';
-?>
-
-<section class="team_section layout_padding">
+<section class="team_section layout_padding" id="doctor">
   <div class="container">
     <div class="heading_container heading_center">
       <h2>Our <span>Doctors</span></h2>
@@ -28,10 +18,10 @@ include __DIR__ . '/components/header.php';
                 <h6><?= e($doctor['degree']) ?></h6>
 
                 <div class="social_box">
-                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href="<?= e($doctor['social']['facebook']) ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="<?= e($doctor['social']['twitter']) ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="<?= e($doctor['social']['linkedin']) ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href="<?= e($doctor['social']['instagram']) ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
               </div>
             </div>
@@ -41,5 +31,3 @@ include __DIR__ . '/components/header.php';
     </div>
   </div>
 </section>
-
-<?php include __DIR__ . '/components/footer.php'; ?>
